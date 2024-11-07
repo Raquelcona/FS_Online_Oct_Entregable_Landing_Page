@@ -1,0 +1,189 @@
+
+nav {
+  background-color: #ffffff; 
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.anuncio {
+    text-align: center; 
+    background-color: pink; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: white;
+    font-size: 15px;
+}
+
+.Cabecera {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.logo img {
+  max-width: 150px; 
+}
+
+.Menu {
+  list-style: none; 
+  display: flex; 
+}
+
+.Menu li {
+  margin-right: 20px; 
+}
+
+.Menu a {
+  text-decoration: none;
+  color: green; 
+  transition: color 0.3s ease; 
+}
+.Menu a:hover {
+    color: #e680c6; 
+  }
+
+.Menu ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Menu li:hover ul {
+  display: block;
+}
+.item img {
+    width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    margin-right: 10px;
+  }
+
+.producto img{
+        width: 1320px;
+        height: 650px;
+        filter: brightness(50%);
+        }
+
+#parrafo1 {
+    font-size: 12px;
+    position: absolute;
+        top: 82%;
+        left: 11%;
+        transform: translate(-50%, -50%); 
+        color: white;
+        text-align: left;
+}
+
+#parrafo2 {
+    font-size: 25px;
+    position: absolute;
+        top: 85%;
+        left: 30%;
+        transform: translate(-50%, -50%); 
+        color: white;
+        text-align: left;
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) 
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-icon span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+/* Media queries */
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: none;
+    }
+    /* Botón para activar el menú en pantallas pequeñas */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-icon span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    /* Menú   
+ desplegable */
+    nav.active ul {
+        display: block;
+        text-align: left;
+        background-color: #f1f1f1;
+        padding: 15px;
+    }
+    nav.active li {
+        float: none;
+    }
+    nav.active .sub-menu {
+        position: static;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    nav ul {
+        display: none;
+    }
+    /* Menú lateral */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #f1f1f1;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size:   
+ 25px;
+        color: black;
+        display:   
+ block;
+    }
+    .sidebar.open {
+        right: 0;
+    }
+    /* Botón para abrir/cerrar el menú lateral */
+    .menu-icon {
+        /* Estilos similares al botón para pantallas pequeñas */
+    }
+}
